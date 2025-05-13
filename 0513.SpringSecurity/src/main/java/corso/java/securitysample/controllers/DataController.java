@@ -8,7 +8,7 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-import corso.java.securitysample.repositories.UserRepository;
+import corso.java.securitysample.entities.UsersRepository;
 import lombok.RequiredArgsConstructor;
 
 @RestController
@@ -16,7 +16,7 @@ import lombok.RequiredArgsConstructor;
 @RequiredArgsConstructor
 public class DataController {
 
-    private final UserRepository userRepository; // Iniettare il repository degli utenti
+    private final UsersRepository userRepository; // Iniettare il repository degli utenti
 
     @GetMapping
     public ResponseEntity<List<String>> test() {
