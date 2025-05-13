@@ -31,7 +31,7 @@ public class AuthenticationServiceImpl implements AuthenticationService {
 		var user = UserEntity.builder() //
 				.withId(null) //
 				.withPassword(passwordEncoder.encode(registerRequest.getPassword())) //
-				.withRole(Role.USER) //
+				.withRole(registerRequest.getRole()) //
 				.withUsername(registerRequest.getUsername()) //
 				.build();
 		repo.save(user);
